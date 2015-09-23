@@ -18,15 +18,18 @@ $().ready(function () {
 
 
     var musica = new Audio();
-
-    // "" the browser does not support this audio/video type
-    // "maybe"  the browser might support this audio/video type
-    // "probably" the browser most likely supports this audio/video type
-    if ( musica.canPlayType("audio/mp3") != "" )
+     
+    if (musica.canPlayType("audio/mp3") != "")
     {
+        musica.oncanplaythrough = function () {
+            alert('Musica foi carregada.');
+            musica.play();
+        };
+
         musica.src = 'musics/03a01.mp3';
-        musica.play();
     }
+
+    
         
     
 
