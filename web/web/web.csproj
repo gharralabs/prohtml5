@@ -68,6 +68,7 @@
     <Content Include="ch01\01.html" />
     <Content Include="ch01\01.js" />
     <Content Include="ch01\images\spaceship.png" />
+    <Content Include="ch01\musics\03a01.mp3" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <None Include="Scripts\jquery-2.1.0-vsdoc.js" />
