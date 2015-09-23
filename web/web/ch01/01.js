@@ -27,6 +27,9 @@ $().ready(function () {
     context.fillText("ola mundo", 330, 80);
     context.stroke();
 
-    
+    context.fillStyle = "rgba(0, 255, 0, 0.6)";
+    context.fillRect(240, 40, 100, 100);
+
+
 
 });
