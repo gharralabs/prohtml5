@@ -7,7 +7,13 @@ $().ready(function () {
     var canvas = $("#testcanvas")[0];
     var context = canvas.getContext('2d');
     
-    var image = $("#spaceship")[0];
+    var image = new Image();
+    image.src = 'images/spaceship.png';
+
+    image.onload = function () {
+        alert('Imagem foi carregada com sucesso');
+    }
+
 
     context.save();
     context.translate(150, 150);
