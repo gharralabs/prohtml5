@@ -21,5 +21,12 @@ $().ready(function () {
     context.lineTo(300, 220);
     context.closePath(); // remova essa linha
     context.stroke();
+    
+    context.fillStyle = "#000000";
+    context.font = "20 pt Arial";
+    context.fillText("ola mundo", 330, 80);
+    context.stroke();
+
+    
 
 });
