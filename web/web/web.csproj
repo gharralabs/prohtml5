@@ -57,6 +57,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="frootwars\images\.DS_Store" />
+    <Content Include="frootwars\images\backgrounds\.DS_Store" />
+    <Content Include="frootwars\images\icons\.DS_Store" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -69,6 +72,32 @@
     <Content Include="ch01\01.js" />
     <Content Include="ch01\images\spaceship.png" />
     <Content Include="ch01\musics\03a01.mp3" />
+    <Content Include="frootwars\images\backgrounds\clouds-background.png" />
+    <Content Include="frootwars\images\backgrounds\desert-foreground.png" />
+    <Content Include="frootwars\images\icons\level copy.png" />
+    <Content Include="frootwars\images\icons\level.png" />
+    <Content Include="frootwars\images\icons\level0.png" />
+    <Content Include="frootwars\images\icons\levelnew.png" />
+    <Content Include="frootwars\images\icons\levelold.png" />
+    <Content Include="frootwars\images\icons\moregames.png" />
+    <Content Include="frootwars\images\icons\next.png" />
+    <Content Include="frootwars\images\icons\nosound.png" />
+    <Content Include="frootwars\images\icons\pause.png" />
+    <Content Include="frootwars\images\icons\play.png" />
+    <Content Include="frootwars\images\icons\playgame.png" />
+    <Content Include="frootwars\images\icons\playmusic.png" />
+    <Content Include="frootwars\images\icons\prev.png" />
+    <Content Include="frootwars\images\icons\return.png" />
+    <Content Include="frootwars\images\icons\settings.png" />
+    <Content Include="frootwars\images\icons\sound.png" />
+    <Content Include="frootwars\images\loader.gif" />
+    <Content Include="frootwars\images\slingshot copy.png" />
+    <Content Include="frootwars\images\slingshot-front.png" />
+    <Content Include="frootwars\images\slingshot.png" />
+    <Content Include="frootwars\images\splashscreen.png" />
+    <Content Include="frootwars\index.html" />
+    <Content Include="frootwars\js\game.js" />
+    <Content Include="frootwars\styles.css" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <None Include="Scripts\jquery-2.1.0-vsdoc.js" />
