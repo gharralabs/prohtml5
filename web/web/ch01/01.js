@@ -5,59 +5,64 @@ Math.toRadians = function (angle) {
 
 var nave = {
     x: 100,
-    y: 100
+    y: 100,
+
+    moverParaCima: function () {
+        this.y -= 10;
+    },
+
+    moverParaBaixo : function(){
+        this.y += 10;
+    }
 };
 
-
 var game = {};
+var teclado = {};
+
+var teclas = { SETA_ESQUERDA : 37,
+    SETA_CIMA : 38,
+    SETA_DIREITA : 39,
+    SETA_BAIXO : 40
+};
 
 $().ready(function () {
-    var canvas = $("#testcanvas")[0];
-    var context = canvas.getContext('2d');
+    var canvas = document.getElementById("testcanvas");
 
-    game.context = context;
+    $(document).keydown(function (e) {
+        e.preventDefault();
 
+        switch (e.which) {
+            case teclas.SETA_BAIXO:
+                nave.moverParaBaixo();
+                break;
+
+            case teclas.SETA_CIMA:
+                nave.moverParaCima();
+                break;
+        }
+    });
    
-    var image = new Image();
-    image.src = 'images/spaceship.png';
+    game.context = canvas.getContext('2d');
 
-    nave.spriteSheet = image;
+    nave.spriteSheet = new Image();
+    nave.spriteSheet.src = 'images/spaceship.png';
 
-    image.onload = function () {
-        //alert('Imagem foi carregada com sucesso');
-    }
-
-
-    context.save();
-    context.translate(150, 150);
-    context.rotate(Math.toRadians(180)); 
-    // (image, sourceX, sourceY, sourceWidth, sourceHeight, x, y, width, height)
-    context.drawImage(image, 0, 0, 60, 50, 0, 0, 120, 100);
-    context.restore();
-
-
-    var musica = new Audio();
+    game.musicaFundo = new Audio();
      
-    if (musica.canPlayType("audio/mp3") != "")
+    if (game.musicaFundo.canPlayType("audio/mp3") != "")
     {
-        musica.oncanplaythrough = function () {
-            //alert('Musica foi carregada.');
-            musica.play();
+        game.musicaFundo.oncanplaythrough = function () {
+            game.musicaFundo.play();
         };
             
-        musica.src = 'musics/03a01.mp3';
+        game.musicaFundo.src = 'musics/03a01.mp3';
     }
-
-
-    
-
-    setInterval(function () {
-        nave.x += 10;
-    }, 100);
 
     window.requestAnimationFrame(desenhar) 
 
 });
+
+
 
 function desenhar() {
     game.context.clearRect(0, 0, 640, 480);
