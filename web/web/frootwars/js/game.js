@@ -109,7 +109,26 @@ var levels = {
     },
 
     load : function(number){
-        alert('Nivel ' + number + ' carregado')
+        game.currentLevel = {
+            number: number,
+            hero: []
+        };
+
+        game.score = 0;
+
+        $("#score").html('Score: ' + game.score);
+        var level = levels.data[number];
+
+        game.currentLevel.backgroundImage = loader.loadImage("images/backgrounds/" + level.background + ".png");
+        game.currentLevel.foregroundImage = loader.loadImage("images/backgrounds/" + level.foreground + ".png");
+        game.slingshotImage = loader.loadImage("images/slingshot.png");
+        game.slingshotFrontImage = loader.loadImage("images/slingshot-front.png");
+
+        if (loader.loaded)
+            game.start();
+        else
+            loader.onload = game.start;
+
     }
 };
 
